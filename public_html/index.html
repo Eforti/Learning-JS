@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div>TODO write content</div>
+        <input type="date" value="1975-10-09" name="DOB" />
+        <br />   
+        Color: <input type="text" name="color" placeholder="red" />
+        <input type="button" value="Change Color" name="pickcolor" />
+        <script type="text/javascript">
+            function logDate() {
+                var date = document.querySelector('input[name="DOB"]');
+                var color = document.querySelector('input[name="color"]');
+                if (color.value != '') {
+                    date.style.borderColor = color.value;
+                }
+                console.log('dateobject');
+                console.log(date);
+            }
+            /*
+             * 
+             */
+            var colorbtn = document.querySelector('input[name="pickcolor"]');
+            colorbtn.addEventListener('click', logDate);
+
+
+
+
+        </script>
+    </body>
+</html>
